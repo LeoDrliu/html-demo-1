@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html-demo1</title>
+    <!-- head一般放看不见的标签，如style -->
+    <!-- 技巧：style标签也可以放在body里，用display:block将其展示出来 -->
+    <!-- 清除默认样式 css reset -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: normal;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+
+    <!-- 业务重新设置样式 -->
+    <style>
+        h1 {
+            font-size: 48px;
+
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .high {
+            background-color: bisque;
+            color: black;
+        }
+
+        /* style里用.匹配只会匹配class的一部分 */
+        .bordered {
+            border: 2px solid black;
+        }
+
+        /* 也可以写为
+        [class=xxx {...}]
+         */
+    </style>
+</head>
+
+<body>
+    <main>
+        <header hidden>没有广告</header>
+        <!-- id类似于class，但不到万不得已不用id -->
+        <div class="high bordered">
+
+            <h1 title="没有标题没有标题">本文章标题</h1>
+            <!-- contenteditable标签内容可编辑 -->
+            <section contenteditable>
+                <!-- style属性和style标签里的样式设置作用一样，但优先级更高 -->
+                <h2 style="border: 2px solid blue;">第一章</h2>
+                <p>
+                    主角挂了
+                    结束
+                </p>
+            </section>
+        </div>
+
+        <!-- 以下为常用内容标签 -->
+        <ol>ordered list</ol>
+
+        <dl>
+            description list
+            <dt>description term</dt>
+            <dd>description data</dd>
+        </dl>
+
+        <pre>保留空格，标签内容全部展示</pre>
+
+        <code>代码</code>
+
+        <!-- 分隔线 -->
+        <hr>
+
+        <!-- break -->
+        <br>
+
+        <!-- 斜体 -->
+        <em></em>
+
+        <!-- 加粗 -->
+        <strong></strong>
+    </main>
+    <aside>
+        没啥用，参考资料吧
+    </aside>
+    <footer>&copy; Drliu版权所有</footer>
+</body>
+
+</html>
